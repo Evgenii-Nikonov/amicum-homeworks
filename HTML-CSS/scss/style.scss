@@ -101,13 +101,12 @@ body {
   }
 }
 
+// what-we-do
 .what-we-do__container {
   max-width: 1368px;
   margin: 0 auto;
   padding: 0px 113px;
 }
-
-// what-we-do
 
 .what-we-do {
   margin-bottom: 64px;
@@ -193,15 +192,21 @@ body {
 
 .our_finished__title {
   font-size: 36px;
-  width: 1140px;
+  max-width: 318px;
   margin: 0 auto;
   margin-bottom: 32px;
 }
 
 .our_finished__description {
-  font-size: 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 162%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #222;
   margin: 0 auto;
   margin-bottom: 32px;
+  max-width: 750px;
 }
 
 .images {
@@ -308,5 +313,105 @@ body {
   &__paragraph {
     padding-bottom: 64px;
     opacity: 0.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 112px;
+  }
+  .header__container {
+    margin-bottom: 0;
+    padding: 0 32px;
+  }
+  .new-automation {
+    margin-bottom: 190px;
+    &__container {
+      padding: 0 32px;
+      position: relative;
+    }
+    &__info {
+      position: relative;
+      z-index: 2;
+    }
+    &__title {
+      font-size: 64px;
+      line-height: 116%;
+      color: $text-color;
+      margin-bottom: 32px;
+      max-width: 504px;
+    }
+    &__description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 162%;
+      letter-spacing: 0.05em;
+      color: $text-color;
+      margin-bottom: 71px;
+      max-width: 425px;
+    }
+    &__btn {
+      width: 220px;
+      height: 56px;
+      border-radius: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #fff;
+      box-shadow: 5px 10px 20px 0 rgba(53, 110, 173, 0.2);
+      background: #5a98d0;
+      cursor: pointer;
+      transition: 0.4s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .img-wrapper {
+      position: absolute;
+      top: 166px;
+      right: 32px;
+      img {
+        width: 336px;
+        height: 292px;
+      }
+    }
+  }
+
+  //**********
+
+  .what-we-do__container {
+    padding: 0px 32px;
+  }
+
+  .what-we-do {
+    &__cards {
+      margin: 0 auto;
+      justify-content: center;
+      max-width: 335px;
+    }
+  }
+  .card {
+    width: 334px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 448px;
+    padding: 40px 30px;
+
+    &__description {
+      max-width: 265px;
+    }
+  }
+}
+@media (max-width: 630px) {
+  .new-automation {
+    &__container {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+    .img-wrapper {
+      margin: 0 auto;
+      position: static;
+    }
   }
 }

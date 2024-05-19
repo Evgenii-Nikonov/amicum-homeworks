@@ -187,15 +187,21 @@ body {
 
 .our_finished__title {
   font-size: 36px;
-  width: 1140px;
+  max-width: 318px;
   margin: 0 auto;
   margin-bottom: 32px;
 }
 
 .our_finished__description {
-  font-size: 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 162%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #222;
   margin: 0 auto;
   margin-bottom: 32px;
+  max-width: 750px;
 }
 
 .images {
@@ -301,4 +307,95 @@ body {
 .contacts__paragraph {
   padding-bottom: 64px;
   opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 112px;
+  }
+  .header__container {
+    margin-bottom: 0;
+    padding: 0 32px;
+  }
+  .new-automation {
+    margin-bottom: 190px;
+  }
+  .new-automation__container {
+    padding: 0 32px;
+    position: relative;
+  }
+  .new-automation__info {
+    position: relative;
+    z-index: 2;
+  }
+  .new-automation__title {
+    font-size: 64px;
+    line-height: 116%;
+    color: #1f3f68;
+    margin-bottom: 32px;
+    max-width: 504px;
+  }
+  .new-automation__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.05em;
+    color: #1f3f68;
+    margin-bottom: 71px;
+    max-width: 425px;
+  }
+  .new-automation__btn {
+    width: 220px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 5px 10px 20px 0 rgba(53, 110, 173, 0.2);
+    background: #5a98d0;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .new-automation__btn:hover {
+    opacity: 0.8;
+  }
+  .new-automation .img-wrapper {
+    position: absolute;
+    top: 166px;
+    right: 32px;
+  }
+  .new-automation .img-wrapper img {
+    width: 336px;
+    height: 292px;
+  }
+  .what-we-do__container {
+    padding: 0px 32px;
+  }
+  .what-we-do__cards {
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 335px;
+  }
+  .card {
+    width: 334px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 448px;
+    padding: 40px 30px;
+  }
+  .card__description {
+    max-width: 265px;
+  }
+}
+@media (max-width: 630px) {
+  .new-automation__container {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .new-automation .img-wrapper {
+    margin: 0 auto;
+    position: static;
+  }
 }
