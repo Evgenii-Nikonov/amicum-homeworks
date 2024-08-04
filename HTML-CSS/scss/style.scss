@@ -211,11 +211,12 @@ body {
 
 .images {
   display: grid;
-  grid-template-columns: 554px 555px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 32px;
   .img-wrapper {
     grid-column: span 1;
+    width: 100%;
     /* каждый .img-wrapper занимает одну колонку */
   }
   .img-text {
